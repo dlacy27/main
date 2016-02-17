@@ -17,24 +17,27 @@
     Copyright 2012-2015 Open Justice Broker Consortium
 
 -->
-<cc-filing-doc:CourtCaseFilingDocument xsi:schemaLocation="http://ojbc.org/IEPD/Exchange/CourtCaseFiling/1.0 ../xsd/CourtCaseFiling_Exchange.xsd" xmlns:cc-filing-doc="http://ojbc.org/IEPD/Exchange/CourtCaseFiling/1.0" xmlns:cc-filing-ext="http://ojbc.org/IEPD/Extension/CourtCaseFiling/1.0" xmlns:j="http://release.niem.gov/niem/domains/jxdm/5.1/" xmlns:nc="http://release.niem.gov/niem/niem-core/3.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/3.0/" xmlns:structures="http://release.niem.gov/niem/structures/3.0/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xop="http://www.w3.org/2004/08/xop/include" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<nc:DocumentCategoryText>Document Category</nc:DocumentCategoryText>
+<cfd-doc:CaseFilingDecisionReport xsi:schemaLocation="http://ojbc.org/IEPD/Exchange/CaseFilingDecisionReport/1.0 ../../../xsd/CaseFilingDecisionReport.xsd" xmlns:cfd-doc="http://ojbc.org/IEPD/Exchange/CaseFilingDecisionReport/1.0" xmlns:cfd-ext="http://ojbc.org/IEPD/Extensions/CaseFilingDecisionReportExtension/1.0" xmlns:j="http://release.niem.gov/niem/domains/jxdm/5.1/" xmlns:nc="http://release.niem.gov/niem/niem-core/3.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/3.0/" xmlns:structures="http://release.niem.gov/niem/structures/3.0/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xop="http://www.w3.org/2004/08/xop/include" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<nc:DocumentCategoryText>String</nc:DocumentCategoryText>
 	<nc:DocumentCreationDate>
-		<nc:Date>2015-12-18</nc:Date>
+		<nc:Date>1967-08-13</nc:Date>
 	</nc:DocumentCreationDate>
 	<nc:DocumentEffectiveDate>
-		<nc:Date>2015-12-18</nc:Date>
+		<nc:Date>1967-08-13</nc:Date>
 	</nc:DocumentEffectiveDate>
-	<cc-filing-ext:VictimRightsAssertionCertificationIndicator>true</cc-filing-ext:VictimRightsAssertionCertificationIndicator>
-	<cc-filing-ext:VictimRightsAssertionText>VRA Text</cc-filing-ext:VictimRightsAssertionText>
+	<nc:DocumentFiledDate>
+		<nc:Date>1967-08-13</nc:Date>
+	</nc:DocumentFiledDate>
+	<cfd-ext:VictimRightsAssertionCertificationIndicator>true</cfd-ext:VictimRightsAssertionCertificationIndicator>
+	<cfd-ext:VictimRightsAssertionText>VRA Text</cfd-ext:VictimRightsAssertionText>
 	<nc:Case>
-		<nc:CaseCategoryText>Department of Public Safety</nc:CaseCategoryText>
+		<nc:ActivityCategoryText>Case Category Text</nc:ActivityCategoryText>
 		<nc:CaseDocketID>Case Docket ID</nc:CaseDocketID>
 		<nc:CaseFiling>
 			<nc:DocumentCategoryName>DCN</nc:DocumentCategoryName>
-			<nc:DocumentFiledDate>
-				<nc:Date>2015-12-18</nc:Date>
-			</nc:DocumentFiledDate>
+			<!-- nc:DocumentFiledDate>
+				<nc:Date>1967-08-13</nc:Date>
+			</nc:DocumentFiledDate-->
 		</nc:CaseFiling>
 		<j:CaseAugmentation>
 			<j:CaseCharge>
@@ -63,17 +66,17 @@
 				<j:ChargeTrackingIdentification>
 					<nc:IdentificationID>Charge Tracking ID</nc:IdentificationID>
 				</j:ChargeTrackingIdentification>
-				<cc-filing-ext:ChargeDomesticViolenceIndicator>true</cc-filing-ext:ChargeDomesticViolenceIndicator>
+				<cfd-ext:ChargeDomesticViolenceIndicator>true</cfd-ext:ChargeDomesticViolenceIndicator>
 			</j:CaseCharge>
 			<j:CaseCourt>
 				<nc:OrganizationName>District Court for the State of Alaska</nc:OrganizationName>
-				<j:CourtName>Anchorage</j:CourtName>
+				<j:CourtName>Third Judicial District of Alaska</j:CourtName>
 				<j:CourtCategoryCode>DIS</j:CourtCategoryCode>
 			</j:CaseCourt>
 			<j:CaseCourtEvent>
 				<j:CourtEventAppearance>
 					<j:CourtAppearanceDate>
-						<nc:Date>2016-01-10</nc:Date>
+						<nc:Date>1967-12-14</nc:Date>
 					</j:CourtAppearanceDate>
 				</j:CourtEventAppearance>
 			</j:CaseCourtEvent>
@@ -82,7 +85,6 @@
 			</j:CaseDefendantParty>
 			<j:CaseInitiatingParty>
 				<nc:EntityPerson structures:ref="Initiating_Party_01"/>
-				<nc:EntityOrganization structures:ref="Initiating_Party_02"/>
 			</j:CaseInitiatingParty>
 			<j:CaseJudge>
 				<nc:RoleOfPerson structures:ref="CJP_01"/>
@@ -112,26 +114,26 @@
 	</nc:Case>
 	<j:Arrest>
 		<j:ArrestAgency>
-			<nc:OrganizationName>Anchorage Police Department</nc:OrganizationName>
+			<nc:OrganizationName>Alaska Police Department</nc:OrganizationName>
 		</j:ArrestAgency>
 		<j:ArrestAgencyRecordIdentification>
 			<nc:IdentificationID>13-33879</nc:IdentificationID>
 			<nc:IdentificationJurisdiction>
-				<nc:JurisdictionText>Anchorage</nc:JurisdictionText>
+				<nc:JurisdictionText>Alaska Police Department</nc:JurisdictionText>
 			</nc:IdentificationJurisdiction>
 		</j:ArrestAgencyRecordIdentification>
 		<j:ArrestOfficial>
 			<j:EnforcementOfficialBadgeIdentification>
-				<nc:IdentificationID>BN455479</nc:IdentificationID>
+				<nc:IdentificationID>String</nc:IdentificationID>
 				<nc:IdentificationJurisdiction>
 					<nc:JurisdictionText>Jurisdiction Text</nc:JurisdictionText>
 				</nc:IdentificationJurisdiction>
 			</j:EnforcementOfficialBadgeIdentification>
 		</j:ArrestOfficial>
 		<j:ArrestProbableCauseText>According to police reports, a neighbor called 911 because two young boys had been trying for nearly three hours to get into their apartment. The children, ages 4 and 5, would knock or ring the doorbell every 20-30 minutes. When APD officers arrived, Defendant, who is the mother of the children, finally answered the door after several minutes. She admitted to drinking and provided a BA of .337</j:ArrestProbableCauseText>
-		<cc-filing-ext:ArrestTrackingNumberIdentification>
+		<cfd-ext:ArrestTrackingNumberIdentification>
 			<nc:IdentificationID>114324066</nc:IdentificationID>
-		</cc-filing-ext:ArrestTrackingNumberIdentification>
+		</cfd-ext:ArrestTrackingNumberIdentification>
 	</j:Arrest>
 	<j:Offense structures:id="Offense_01">
 		<nc:ActivityDate>
@@ -140,7 +142,7 @@
 	</j:Offense>
 	<nc:Person structures:id="Defendant_01">
 		<nc:PersonBirthDate>
-			<nc:Date>1980-07-27</nc:Date>
+			<nc:Date>1980-07-26</nc:Date>
 		</nc:PersonBirthDate>
 		<nc:PersonDigitizedSignatureImage>
 			<nc:Base64BinaryObject>UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</nc:Base64BinaryObject>
@@ -163,22 +165,22 @@
 				<nc:JurisdictionText>Jurisdiction Text</nc:JurisdictionText>
 			</nc:IdentificationJurisdiction>
 		</nc:PersonStateIdentification>
-		<cc-filing-ext:AlaskaPublicSafetyInformationNetworkIdentification>
-			<nc:IdentificationID>859644</nc:IdentificationID>
-		</cc-filing-ext:AlaskaPublicSafetyInformationNetworkIdentification>
-		<cc-filing-ext:OperatorLicenseIdentification>
-			<nc:IdentificationID>1234567</nc:IdentificationID>
-			<nc:IdentificationCategoryText>OLN</nc:IdentificationCategoryText>
-		</cc-filing-ext:OperatorLicenseIdentification>
+		<cfd-ext:AlaskaPublicSafetyInformationNetworkIdentification>
+			<nc:IdentificationID>6418462</nc:IdentificationID>
+		</cfd-ext:AlaskaPublicSafetyInformationNetworkIdentification>
+		<cfd-ext:OperatorLicenseIdentification>
+			<nc:IdentificationID>OL2345768</nc:IdentificationID>
+			<nc:IdentificationCategoryText>ATV</nc:IdentificationCategoryText>
+		</cfd-ext:OperatorLicenseIdentification>
 		<j:PersonAugmentation>
 			<j:DriverLicense>
 				<j:DriverLicenseIdentification>
-					<nc:IdentificationID>6418462</nc:IdentificationID>
+					<nc:IdentificationID>5436789</nc:IdentificationID>
 					<nc:IdentificationJurisdiction>
-						<nc:JurisdictionText>AK</nc:JurisdictionText>
+						<nc:JurisdictionText>Jurisdiction Text</nc:JurisdictionText>
 					</nc:IdentificationJurisdiction>
 				</j:DriverLicenseIdentification>
-				<cc-filing-ext:CDLHolderCode>2</cc-filing-ext:CDLHolderCode>
+				<cfd-ext:CDLHolderCode>2</cfd-ext:CDLHolderCode>
 			</j:DriverLicense>
 		</j:PersonAugmentation>
 	</nc:Person>
@@ -219,20 +221,17 @@
 		</j:JudicialOfficialBarMembership>
 		<j:JudicialOfficialCategoryText>Position</j:JudicialOfficialCategoryText>
 	</j:JudicialOfficial>
-	<nc:Organization structures:id="Initiating_Party_02">
-		<nc:OrganizationName>Case Initiating Organization</nc:OrganizationName>
-	</nc:Organization>
 	<nc:Location structures:id="OL01">
 		<nc:LocationDescriptionText>Smithville</nc:LocationDescriptionText>
 	</nc:Location>
 	<nc:Location structures:id="RES01">
 		<nc:Address>
 			<nc:LocationStreet>
-				<nc:StreetFullText>6701 E. 6th Ave. #17</nc:StreetFullText>
+				<nc:StreetFullText>123 N Oak Street Apt #5</nc:StreetFullText>
 			</nc:LocationStreet>
 			<nc:LocationCityName>Anchorage</nc:LocationCityName>
 			<nc:LocationStateUSPostalServiceCode>AK</nc:LocationStateUSPostalServiceCode>
-			<nc:LocationPostalCode>59602</nc:LocationPostalCode>
+			<nc:LocationPostalCode>32678</nc:LocationPostalCode>
 		</nc:Address>
 	</nc:Location>
 	<nc:PersonResidenceAssociation>
@@ -243,9 +242,9 @@
 		<j:Offense structures:ref="Offense_01"/>
 		<nc:Location structures:ref="OL01"/>
 	</j:OffenseLocationAssociation>
-	<!-- cc-filing-ext:CourtCaseFilingAttachment>
+	<!-- cfd-ext:CaseFilingDecisionAttachment>
 		<nc:DocumentBinary>
-    		<cc-filing-ext:Base64BinaryObject>VGhpcyBpcyBhIGNyaW1pbmFsIGhpc3Rvcnk=</cc-filing-ext:Base64BinaryObject>
+    		<cfd-ext:Base64BinaryObject>VGhpcyBpcyBhIGNyaW1pbmFsIGhpc3Rvcnk=</cfd-ext:Base64BinaryObject>
         </nc:DocumentBinary>
-	</cc-filing-ext:CourtCaseFilingAttachment-->
-</cc-filing-doc:CourtCaseFilingDocument>
+	</cfd-ext:CaseFilingDecisionAttachment-->
+</cfd-doc:CaseFilingDecisionReport>
